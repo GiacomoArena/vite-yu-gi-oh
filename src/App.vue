@@ -25,6 +25,9 @@ export default {
       })
     }
   },
+  mounted(){
+    this.getApi();
+  }
 }
 
 </script>

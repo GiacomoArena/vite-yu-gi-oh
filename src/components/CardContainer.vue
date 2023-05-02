@@ -15,7 +15,10 @@ export default {
     <section>
 
       <div class="container">
-      
+        <span>
+          Found 39 carte
+        </span>
+
         <Card />
 
       </div>
@@ -30,5 +33,11 @@ export default {
     width: 90%;
     margin: 0 auto;
     background-color: white;
+    span{
+      width: 100%;
+      height: 60px;
+      background-color: $secondary-color;
+      color: white;
+    }
   }
 </style>

@@ -10,7 +10,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-  @import '../scss/partials/variables';
-  @import '../scss/partials/general' ;
+  @import '../../scss/partials/variables';
+  @import '../../scss/partials/general';
 
 </style>
