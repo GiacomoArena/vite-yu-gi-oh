@@ -2,7 +2,6 @@
 <script>
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
-import CardContainer from './components/CardContainer.vue';
 import axios from "axios";  
 import {store} from "./data/store";
 
@@ -12,7 +11,6 @@ export default {
   components:{
     Header,
     Main,
-    CardContainer
   },
   data(){
     return{
@@ -36,6 +34,8 @@ export default {
   <Header />
 
   <Main />
+
+  
 
 </template>
 

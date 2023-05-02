@@ -14,6 +14,7 @@ export default {
 
 <style lang="scss" scoped>
   @use '../scss/partials/variables';
+  @use '../scss/partials/general';
   .top-container{
     display: flex;
     align-items: center;
