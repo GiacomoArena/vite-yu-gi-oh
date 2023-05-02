@@ -13,6 +13,8 @@ export default {
       store
     }
   },
+  mounted(){
+  }
 }
 </script>
 
@@ -22,9 +24,10 @@ export default {
       <div class="container">
         
         
-        <Card v-for="(card, i) in store.resultArray"
-        :key="i" 
-        :card="card[i]"
+        <Card v-for="(card, index) in store.resultArray.data"
+        :key="index" 
+        :card="card"
+        :i="index"
         />
 
       </div>

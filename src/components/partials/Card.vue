@@ -4,14 +4,21 @@ import {store} from "../../data/store";
 
 export default {
   name:"Card",
-  
+
   props:{
-    card: Object 
+    card: Object,
+    i:Number
   },
   data(){
     return{
-      store
+      store,
     }
+  },
+  methods:{
+    
+  },
+  mounted(){
+    console.log(this.card);
   }
 }
 </script>
@@ -19,7 +26,7 @@ export default {
 <template>
 
   <div class="card-container">
-    <img :src="card.card_images.image_url" alt="card">
+    <img  :src="card.card_images[0].image_url" alt="card">
     <div class="card-info">
       <h5>	'"A" Cell Breeding Device'</h5>
       <span>Alien</span>
