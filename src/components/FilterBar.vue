@@ -1,12 +1,12 @@
 
 <script>
 export default {
-  name:"Main"
+  name:"Filter-bar"
 }
 </script>
 
 <template>
-    <h1>Main</h1>
+    
 </template>
 
 <style>
