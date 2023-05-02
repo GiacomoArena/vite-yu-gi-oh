@@ -14,13 +14,14 @@ export default {
   },
   data(){
     return{
-
+      store
     }
   },
   methods:{
     getApi(){
       axios.get(store.apiUrl)
       .then(result => {
+        store.resultArray = result.data;
         console.log(result.data);
       })
     }

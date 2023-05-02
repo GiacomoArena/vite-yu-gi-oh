@@ -1,6 +1,6 @@
 
 <script>
-
+import {store} from "../data/store";
 import Card from "./partials/Card.vue";
 
 export default {
@@ -8,18 +8,24 @@ export default {
   components:{
     Card
     },
+    data(){
+    return{
+      store
+    }
+  },
 }
 </script>
 
 <template>
     <section>
-
+      
       <div class="container">
-        <span>
-          Found 39 carte
-        </span>
-
-        <Card />
+        
+        
+        <Card v-for="(card, i) in store.resultArray"
+        :key="i" 
+        :card="card[i]"
+        />
 
       </div>
 
@@ -30,9 +36,12 @@ export default {
   @import '../scss/partials/variables';
   @import '../scss/partials/general' ;
   .container{
+    display: flex;
+    justify-content: center;
     width: 90%;
     margin: 0 auto;
     background-color: white;
+    flex-wrap: wrap;
     span{
       width: 100%;
       height: 60px;

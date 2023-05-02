@@ -35,7 +35,7 @@ export default {
   @import '../scss/partials/general' ;
 
   section{
-    height: 100vh;
+    height: 100%;
     background-color: $primary-color;
     select{
       margin: 30px 100px;

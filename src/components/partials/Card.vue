@@ -1,16 +1,52 @@
 
 <script>
+import {store} from "../../data/store";
+
 export default {
-  name:"Card"
+  name:"Card",
+  
+  props:{
+    card: Object 
+  },
+  data(){
+    return{
+      store
+    }
+  }
 }
 </script>
 
 <template>
-  <h1>questa è la card </h1>
+
+  <div class="card-container">
+    <img :src="card.card_images.image_url" alt="card">
+    <div class="card-info">
+      <h5>	'"A" Cell Breeding Device'</h5>
+      <span>Alien</span>
+    </div>
+  </div>
+  
 </template>
 
 <style lang="scss" scoped>
   @import '../../scss/partials/variables';
   @import '../../scss/partials/general';
-
+  .card-container{
+    width: calc(100% / 6);
+    margin: 20px 10px;
+    flex-wrap: wrap;
+    text-align: center;
+    img{
+      width: 100%;
+    }
+    h5{
+      font-size: 1rem;
+      padding: 15px 0;
+    }
+    .card-info{
+      width: 100%;
+      height: 130px;
+      background-color: $primary-color;
+    }
+  }
 </style>
