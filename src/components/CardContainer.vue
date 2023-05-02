@@ -1,7 +1,7 @@
 
 <script>
 export default {
-  name:"Filter-bar"
+  name:"CardContainer"
 }
 </script>
 

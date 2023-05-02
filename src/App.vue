@@ -2,8 +2,9 @@
 <script>
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
-import FilterBar from './components/FilterBar.vue';
+import CardContainer from './components/CardContainer.vue';
 import axios from "axios";  
+import {store} from "./data/store";
 
 
 export default {
@@ -11,7 +12,7 @@ export default {
   components:{
     Header,
     Main,
-    FilterBar
+    CardContainer
   },
   data(){
     return{
@@ -22,7 +23,7 @@ export default {
     getApi(){
       axios.get(store.apiUrl)
       .then(result => {
-        
+        console.log(result.data);
       })
     }
   },
@@ -39,5 +40,5 @@ export default {
 </template>
 
 <style lang="scss">
-
+  @use './scss/main.scss' as * ;
 </style>
