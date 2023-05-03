@@ -7,4 +7,5 @@ export const store = reactive ({
   resultArray:[],
   listType:[],
   typeSearch:[],
+  isLoading: true
 })

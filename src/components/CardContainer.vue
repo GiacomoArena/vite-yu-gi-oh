@@ -24,7 +24,8 @@ export default {
       <div class="container">
 
         <div class="filter-container">
-          <h1>Found {{ store.resultArray.data.length }} Cards</h1>          
+          <h1 v-if="store.resultArray.length != 0"> Found {{store.resultArray.data.length}} Cards</h1>          
+          <h1 v-else> Found {{store.resultArray.length}} Cards</h1>          
         </div>
         
         <Card v-for="(card, index) in store.resultArray.data"
@@ -50,11 +51,17 @@ export default {
     flex-wrap: wrap;
     
     .filter-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 80px;
       background-color: $secondary-color;
       margin-top: 20px;
       color: $primary-color;
+    }
+    h1{
+      
     }
   }
 </style>

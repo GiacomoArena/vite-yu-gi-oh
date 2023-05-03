@@ -19,7 +19,7 @@ export default {
   },
   methods:{
     getApi(){
-
+      store.isLoading = true
       axios.get(store.apiUrl, {
         params:{
           type: store.typeSearch
@@ -37,7 +37,7 @@ export default {
               store.typeSearch.push(element.type)
             }
           });
-        
+          store.isLoading = false
           console.log('listType', store.listType);
             
           
