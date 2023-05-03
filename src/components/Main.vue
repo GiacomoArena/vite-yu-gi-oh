@@ -23,7 +23,7 @@ export default {
 
       <select name="type" id="type">
         <option value="alien">All</option>
-        <option v-for="(type, i ) in store.listType" :key="i" value="monster">monster</option>
+        <option v-for="(type, i ) in store.listType" :key="i" :value="type">{{type}}</option>
       </select>
 
       <CardContainer />

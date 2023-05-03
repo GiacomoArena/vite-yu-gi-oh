@@ -26,7 +26,7 @@ export default {
         store.resultArray = result.data;
         //console.log(result.data);
 
-        if (store.listType.length === 0) {
+
           store.resultArray.data.forEach(element => {
             //console.log(element.type);
             if (!store.listType.includes(element.type)) {
@@ -35,7 +35,7 @@ export default {
           });
           console.log('listtype', store.listType);
             
-          }
+          
         
       })
     }
