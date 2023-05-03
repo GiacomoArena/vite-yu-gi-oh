@@ -21,7 +21,11 @@ export default {
     getApi(){
       store.isLoading = true
 
-      axios.get(store.apiUrl)
+      axios.get(store.apiUrl, {
+        params:{
+          type: store.listType
+        }
+      })
       .then(result => {
         store.resultArray = result.data;
         //console.log(result.data);
@@ -33,7 +37,7 @@ export default {
               store.listType.push(element.type)
             }
           });
-          console.log('listtype', store.listType);
+          console.log('listType', store.listType);
             
           
         
@@ -52,8 +56,8 @@ export default {
   <Header />
 
   
-  <Main />
-
+  <Main @startSearch="getApi" />
+  
   
 
 </template>

@@ -21,11 +21,12 @@ export default {
 
 
 
-      <select name="type" id="type">
-        <option value="alien">All</option>
+      <select v-model="store.listType"  name="type" id="type">
+        <option value= "" >All</option>
         <option v-for="(type, i ) in store.listType" :key="i" :value="type">{{type}}</option>
       </select>
 
+      <button  @click="$emit('startSearch')"> search</button>
       <CardContainer />
 
     </section>

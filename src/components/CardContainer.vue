@@ -30,7 +30,7 @@ export default {
         <Card v-for="(card, index) in store.resultArray.data"
         :key="index" 
         :card="card"
-        :type="card.archetype || card.type"
+        :type="card.type"
         />
 
       </div>
