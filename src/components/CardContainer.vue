@@ -22,12 +22,15 @@ export default {
     <section>
       
       <div class="container">
-        
+        <div class="filter-container">
+          
+          found 39 card
+        </div>
         
         <Card v-for="(card, index) in store.resultArray.data"
         :key="index" 
         :card="card"
-        :i="index"
+        :type="card.archetype || card.type"
         />
 
       </div>
@@ -45,11 +48,11 @@ export default {
     margin: 0 auto;
     background-color: white;
     flex-wrap: wrap;
-    span{
+    
+    .filter-container{
       width: 100%;
-      height: 60px;
+      height: 80px;
       background-color: $secondary-color;
-      color: white;
     }
   }
 </style>

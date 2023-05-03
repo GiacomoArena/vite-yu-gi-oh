@@ -7,7 +7,7 @@ export default {
 
   props:{
     card: Object,
-    i:Number
+    type:String
   },
   data(){
     return{
@@ -28,8 +28,8 @@ export default {
   <div class="card-container">
     <img  :src="card.card_images[0].image_url" alt="card">
     <div class="card-info">
-      <h5>	'"A" Cell Breeding Device'</h5>
-      <span>Alien</span>
+      <h5>	{{card.name}}</h5>
+      <span>{{type}}</span>
     </div>
   </div>
   
