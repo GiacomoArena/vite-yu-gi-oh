@@ -19,11 +19,10 @@ export default {
   },
   methods:{
     getApi(){
-      store.isLoading = true
 
       axios.get(store.apiUrl, {
         params:{
-          type: store.listType
+          type: store.typeSearch
         }
       })
       .then(result => {
@@ -35,14 +34,17 @@ export default {
             //console.log(element.type);
             if (!store.listType.includes(element.type)) {
               store.listType.push(element.type)
+              store.typeSearch.push(element.type)
             }
           });
+        
           console.log('listType', store.listType);
             
           
         
       })
-    }
+    },
+    
   },
   mounted(){
     this.getApi();

@@ -12,6 +12,9 @@ export default {
     return{
       store
     }
+  },
+  methods:{
+    
   }
 }
 </script>
@@ -21,8 +24,8 @@ export default {
 
 
 
-      <select v-model="store.listType"  name="type" id="type">
-        <option value= "" >All</option>
+      <select  v-model="store.typeSearch"  name="type" id="type">
+        <option value="" >All</option>
         <option v-for="(type, i ) in store.listType" :key="i" :value="type">{{type}}</option>
       </select>
 
