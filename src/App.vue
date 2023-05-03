@@ -19,10 +19,24 @@ export default {
   },
   methods:{
     getApi(){
+      store.isLoading = true
+
       axios.get(store.apiUrl)
       .then(result => {
         store.resultArray = result.data;
-        console.log(result.data);
+        //console.log(result.data);
+
+        if (store.listType.length === 0) {
+          store.resultArray.data.forEach(element => {
+            //console.log(element.type);
+            if (!store.listType.includes(element.type)) {
+              store.listType.push(element.type)
+            }
+          });
+          console.log('listtype', store.listType);
+            
+          }
+        
       })
     }
   },
@@ -37,6 +51,7 @@ export default {
 
   <Header />
 
+  
   <Main />
 
   

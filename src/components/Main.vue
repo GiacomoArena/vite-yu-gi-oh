@@ -1,6 +1,6 @@
 
 <script>
-
+import {store} from '../data/store';
 import CardContainer from './CardContainer.vue';
 
 export default {
@@ -10,7 +10,7 @@ export default {
   },
   data(){
     return{
-
+      store
     }
   }
 }
@@ -19,10 +19,11 @@ export default {
 <template>
     <section>
 
-      <label for="type"></label>
+
+
       <select name="type" id="type">
-        <option value="alien">alien</option>
-        <option value="monster">monster</option>
+        <option value="alien">All</option>
+        <option v-for="(type, i ) in store.listType" :key="i" value="monster">monster</option>
       </select>
 
       <CardContainer />
