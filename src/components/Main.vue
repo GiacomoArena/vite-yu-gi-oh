@@ -14,7 +14,10 @@ export default {
     }
   },
   methods:{
-    
+    reset(){
+      store.listType =[]
+      store.typeSearch =[]
+    }
   }
 }
 </script>
@@ -24,12 +27,12 @@ export default {
 
 
 
-      <select  v-model="store.typeSearch"  name="type" id="type">
-        <option value="" >All</option>
+      <select @click="$emit('startSearch')" v-model="store.typeSearch"  name="type" id="type">
+        <option value="" @click="reset()" >All</option>
         <option v-for="(type, i ) in store.listType" :key="i" :value="type">{{type}}</option>
       </select>
 
-      <button  @click="$emit('startSearch')"> search</button>
+      
       <CardContainer />
 
     </section>
