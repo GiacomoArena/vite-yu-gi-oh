@@ -42,6 +42,7 @@ export default {
     margin: 20px 10px;
     flex-wrap: wrap;
     text-align: center;
+    cursor: pointer;
     img{
       width: 100%;
     }
@@ -53,6 +54,10 @@ export default {
       width: 100%;
       height: 130px;
       background-color: $primary-color;
+    }
+    span{
+      font-weight: 600;
+      
     }
   }
 </style>
